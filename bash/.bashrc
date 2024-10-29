@@ -485,20 +485,19 @@ fi
 # Function to install and configure Starship
 install_starship ()
 {
+    if command -v starship &> /dev/null; then
     # Create the Starship configuration directory
     mkdir -p ~/config/starship
 
     # Download the starship.toml file from your GitHub repository
-    echo "Downloading starship.toml from GitHub repository..."
-    curl -o ~/config/starship/starship.toml https://raw.githubusercontent.com/Nagusika/dotfiles/refs/heads/main/bash/starship/starship.toml
-
-    # Install Starship
-    echo "Installing Starship..."
-    curl -sS https://starship.rs/install.sh | sh -s -- --yes
+    cargo install starship --locked
 
     # Initialize Starship
     echo "Initializing Starship..."
     eval "$(starship init bash)"
+    else
+      echo "cargo not available"
+    fi
 }
 
 # Alias to install Starship and execute it
