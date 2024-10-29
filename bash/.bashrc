@@ -428,15 +428,16 @@ install_cargo_bash_tools ()
     # List of useful Cargo tools
     cargo_install_tools=(
         scout
-        hexa
+        zea
         hyperfine
         procs
         zenith
         bat
         zoxide
         dua-cli
-        dust
+        du-dust
         ripgrep
+        zellij
     )
 
     echo "Installing or updating Cargo tools..."
@@ -470,12 +471,12 @@ if command -v cargo &> /dev/null; then
     alias bat='bat'
     alias rg='ripgrep'
     alias dust='dust'
-    alias zoxide='zoxide'
-    alias duacli='dua-cli'
+    alias z='zoxide'
+    alias dua='dua'
     alias zenith='zenith'
     alias hyperfine='hyperfine'
-    alias hexa='hexa'
-    alias scout='scout'
+    alias exa='eza'
+    alias fzf='scout'
 fi
 
 #######################################################
@@ -485,7 +486,7 @@ fi
 # Function to install and configure Starship
 install_starship ()
 {
-    if command -v starship &> /dev/null; then
+    if command -v cargo &> /dev/null; then
     # Create the Starship configuration directory
     mkdir -p ~/config/starship
 
@@ -499,9 +500,6 @@ install_starship ()
       echo "cargo not available"
     fi
 }
-
-# Alias to install Starship and execute it
-alias install_starship='install_starship'
 
 # Initialize Starship if installed
 if command -v starship &> /dev/null; then
