@@ -487,11 +487,11 @@ fi
 install_starship ()
 {
     # Create the Starship configuration directory
-    mkdir -p ~/.config/starship
+    mkdir -p ~/.config
 
     # Download the starship.toml file from your GitHub repository
     echo "Downloading starship.toml from GitHub repository..."
-    curl -o ~/.config/starship/starship.toml https://raw.githubusercontent.com/Nagusika/dotfiles/refs/heads/main/starship/starship.toml
+    curl -o ~/.config/starship.toml https://raw.githubusercontent.com/Nagusika/dotfiles/refs/heads/main/starship/starship.toml
 
     # Install Starship
     echo "Installing Starship..."
