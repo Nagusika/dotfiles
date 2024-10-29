@@ -1,9 +1,11 @@
 #!/bin/bash
 
+# .bashrc automatically deployed from https://raw.githubusercontent.com/Nagusika/dotfiles/refs/heads/main/bash/.bashrc
+
 iatest=$(expr index "$-" i)
 
 #######################################################
-# SOURCED ALIAS'S AND SCRIPTS BY zachbrowne.me
+# SOURCED ALIASES AND SCRIPTS BY zachbrowne.me
 #######################################################
 
 # Source global definitions
@@ -56,6 +58,18 @@ alias spico='sedit'
 alias nano='edit'
 alias snano='sedit'
 
+# Add ~/bin to PATH if it exists
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
+# Add ~/.local/bin to PATH if it exists
+# set PATH so it includes user's local bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
 # To have colors for ls and all grep commands such as grep, egrep and zgrep
 export CLICOLOR=1
 export LS_COLORS='no=00:fi=00:di=00;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.avi=01;35:*.fli=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.ogg=01;35:*.mp3=01;35:*.wav=01;35:*.xml=00;31:'
@@ -73,27 +87,27 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 #######################################################
-# MACHINE SPECIFIC ALIAS'S
+# MACHINE SPECIFIC ALIASES
 #######################################################
 
-# Alias's for SSH
+# Aliases for SSH
 # alias SERVERNAME='ssh YOURWEBSITE.com -l USERNAME -p PORTNUMBERHERE'
 
-# Alias's to change the directory
+# Aliases to change the directory
 alias web='cd /var/www/html'
 
-# Alias's to mount ISO files
+# Aliases to mount ISO files
 # mount -o loop /home/NAMEOFISO.iso /home/ISOMOUNTDIR/
 # umount /home/NAMEOFISO.iso
 # (Both commands done as root only.)
 
 #######################################################
-# GENERAL ALIAS'S
+# GENERAL ALIASES
 #######################################################
-# To temporarily bypass an alias, we precede the command with a \
+# To temporarily bypass an alias, precede the command with a \
 # EG: the ls command is aliased, but to use the normal ls command you would type \ls
 
-# Add an "alert" alias for long running commands.  Use like so:
+# Add an "alert" alias for long running commands. Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history | tail -n1 | sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
@@ -103,10 +117,10 @@ alias ebrc='edit ~/.bashrc'
 # Show help for this .bashrc file
 alias hlp='less ~/.bashrc_help'
 
-# alias to show the date
+# Alias to show the date
 alias da='date "+%Y-%m-%d %A %T %Z"'
 
-# Alias's to modified commands
+# Aliases to modified commands
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -iv'
@@ -136,7 +150,7 @@ alias bd='cd "$OLDPWD"'
 # Remove a directory and all files
 alias rmd='/bin/rm --recursive --force --verbose '
 
-# Alias's for multiple directory listing commands
+# Aliases for multiple directory listing commands
 alias la='ls -Alh' # show hidden files
 alias ls='ls -aFh --color=always' # add colors and file type extensions
 alias lx='ls -lXBh' # sort by extension
@@ -147,12 +161,12 @@ alias lr='ls -lRh' # recursive ls
 alias lt='ls -ltrh' # sort by date
 alias lm='ls -alh | more' # pipe through 'more'
 alias lw='ls -xAh' # wide listing format
-alias ll='ls -Fls' # long listing format avec icônes
+alias ll='ls -Fls' # long listing format with icons
 alias labc='ls -lap' # alphabetical sort
 alias lf="ls -l | egrep -v '^d'" # files only
 alias ldir="ls -l | egrep '^d'" # directories only
 
-# alias chmod commands
+# Alias chmod commands
 alias mx='chmod a+x'
 alias 000='chmod -R 000'
 alias 644='chmod -R 644'
@@ -180,11 +194,11 @@ alias checkcommand="type -t"
 alias ipview="netstat -anpl | grep :80 | awk {'print \$5'} | cut -d\":\" -f1 | sort | uniq -c | sort -n | sed -e 's/^ *//' -e 's/ *\$//'"
 alias openports='netstat -nape --inet'
 
-# Alias's for safe and forced reboots
+# Aliases for safe and forced reboots
 alias rebootsafe='sudo shutdown -r now'
 alias rebootforce='sudo shutdown -r -n now'
 
-# Alias's to show disk space and space used in a folder
+# Aliases to show disk space and space used in a folder
 alias diskspace="du -S | sort -n -r | more"
 alias folders='du -h --max-depth=1'
 alias folderssort='find . -maxdepth 1 -type d -print0 | xargs -0 du -sk | sort -rn'
@@ -192,7 +206,7 @@ alias tree='tree -CAhF --dirsfirst'
 alias treed='tree -CAFd'
 alias mountedinfo='df -hT'
 
-# Alias's for archives
+# Aliases for archives
 alias mktar='tar -cvf'
 alias mkbz2='tar -cvjf'
 alias mkgz='tar -cvzf'
@@ -254,7 +268,7 @@ extract () {
                 *.zip)       unzip "$archive"       ;;
                 *.Z)         uncompress "$archive"  ;;
                 *.7z)        7z x "$archive"        ;;
-                *)           echo "don't know how to extract '$archive'..." ;;
+                *)           echo "Don't know how to extract '$archive'..." ;;
             esac
         else
             echo "'$archive' is not a valid file!"
@@ -316,7 +330,7 @@ mkdirg ()
     cd "$1"
 }
 
-# Goes up a specified number of directories  (i.e. up 4)
+# Goes up a specified number of directories (e.g., up 4)
 up ()
 {
     local d=""
@@ -398,20 +412,20 @@ ver ()
 
 install_cargo_bash_tools ()
 {
-    # Installer Rust et Cargo localement via rustup
+    # Install Rust and Cargo locally via rustup
     if ! command -v cargo &> /dev/null; then
-        echo "Installation de Rust et Cargo via rustup..."
+        echo "Installing Rust and Cargo via rustup..."
         curl https://sh.rustup.rs -sSf | sh -s -- -y
         source "$HOME/.cargo/env"
     else
-        echo "Cargo est déjà installé."
+        echo "Cargo is already installed."
     fi
 
-    # Mettre à jour Rust et Cargo
-    echo "Mise à jour de Rust et Cargo..."
+    # Update Rust and Cargo
+    echo "Updating Rust and Cargo..."
     rustup update
 
-    # Liste des outils Cargo utiles
+    # List of useful Cargo tools
     cargo_install_tools=(
         scout
         hexa
@@ -425,36 +439,33 @@ install_cargo_bash_tools ()
         ripgrep
     )
 
-    echo "Installation ou mise à jour des outils Cargo..."
+    echo "Installing or updating Cargo tools..."
 
     for tool in "${cargo_install_tools[@]}"; do
         if cargo install --list | grep -q "^${tool} "; then
-            echo "Mise à jour de l'outil Cargo '$tool'..."
+            echo "Updating Cargo tool '$tool'..."
             cargo install "$tool" --force
         else
-            echo "Installation de l'outil Cargo '$tool'..."
+            echo "Installing Cargo tool '$tool'..."
             cargo install "$tool"
         fi
     done
 
-    echo "Outils Cargo installés ou mis à jour avec succès."
+    echo "Cargo tools installed or updated successfully."
 }
 
-# Renommer la fonction install_bash_tools en install_cargo_bash_tools
-# (Déjà fait ci-dessus)
-
-# Activer les alias seulement si Cargo est disponible
+# Activate aliases only if Cargo is available
 if command -v cargo &> /dev/null; then
-    # Alias pour installer les outils utiles avec Cargo
+    # Alias to install or update Cargo tools
     alias install_cargo_tools='install_cargo_bash_tools'
 
-    # Alias pour mettre à jour Rust et Cargo
+    # Alias to update Rust and Cargo
     alias update_cargo='rustup update'
 
-    # Alias pour mettre à jour les paquets Cargo actuels
+    # Alias to update current Cargo packages
     alias upgrade_cargo_packages='cargo update'
 
-    # Alias des outils Cargo si disponibles
+    # Aliases for Cargo tools if available
     alias procs='procs'
     alias bat='bat'
     alias rg='ripgrep'
@@ -471,27 +482,62 @@ fi
 # STARSHIP PROMPT
 #######################################################
 
-# Fonction pour installer et configurer Starship
+# Function to install and configure Starship
 install_starship ()
 {
-    # Installer Starship
-    echo "Installation de Starship..."
+    # Create the Starship configuration directory
+    mkdir -p ~/config/starship
+
+    # Download the starship.toml file from your GitHub repository
+    echo "Downloading starship.toml from GitHub repository..."
+    curl -o ~/config/starship/starship.toml https://raw.githubusercontent.com/Nagusika/dotfiles/refs/heads/main/bash/starship/starship.toml
+
+    # Install Starship
+    echo "Installing Starship..."
     curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
-    # Ajouter Starship à PATH
+    # Initialize Starship
+    echo "Initializing Starship..."
     eval "$(starship init bash)"
 }
 
-# Alias pour installer Starship et l'exécuter
+# Alias to install Starship and execute it
 alias install_starship='install_starship'
 
-# Initialiser Starship si installé
+# Initialize Starship if installed
 if command -v starship &> /dev/null; then
     eval "$(starship init bash)"
 fi
 
 #######################################################
+# DEPLOY BASHRC FUNCTION
+#######################################################
+
+# Function to deploy .bashrc from GitHub
+deploy_bashrc ()
+{
+    local backup_file="$HOME/.bashrc.backup_$(date +%Y%m%d%H%M%S)"
+    echo "Backing up current .bashrc to $backup_file..."
+    cp ~/.bashrc "$backup_file"
+
+    echo "Downloading new .bashrc from GitHub..."
+    curl -o ~/.bashrc https://raw.githubusercontent.com/Nagusika/dotfiles/refs/heads/main/bash/.bashrc
+
+    if [ $? -eq 0 ]; then
+        echo ".bashrc deployed successfully."
+        source ~/.bashrc
+    else
+        echo "Failed to download .bashrc. Restoring backup."
+        cp "$backup_file" ~/.bashrc
+        echo "Backup restored."
+    fi
+}
+
+# Alias to deploy .bashrc
+alias deploy_bashrc='deploy_bashrc'
+
+#######################################################
 # END OF CONFIGURATION
 #######################################################
 
-# Note : Supprimé la configuration PS1 précédente pour utiliser Starship
+# Note: Removed the previous PS1 configuration to use Starship instead
