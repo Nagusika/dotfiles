@@ -1,0 +1,134 @@
+[2m2024-09-13T12:48:11.784628Z[0m [31mERROR[0m [2mglazewm::common::commands::shell_exec[0m[2m:[0m [3merr_message[0m[2m=[0m"Failed to execute '%userprofile%/.glzr/zebar/start.bat'.\n\nError: Program path is not valid for command '%userprofile%/.glzr/zebar/start.bat'."
+[2m2024-09-13T12:58:36.305117Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent
+[2m2024-09-13T12:59:33.015319Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m No parent
+[2m2024-09-14T17:32:25.837131Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m binding_modes[2]: missing field `name` at line 153 column 5
+[2m2024-09-14T17:33:25.301327Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Another instance of the application is already running.
+[2m2024-09-15T08:00:29.163366Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-15T08:03:55.695426Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-15T08:04:01.386443Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to get workspace of nearest monitor.
+[2m2024-09-15T20:07:27.045562Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-15T20:08:00.947072Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-15T20:08:02.642513Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:10:54.773748Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:10:58.296774Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:10:58.883090Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:10:59.351180Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:10:59.779201Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:11:00.145492Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:11:00.609498Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:11:01.018797Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T12:11:01.242476Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T15:31:23.923647Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:05.521911Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:06.171000Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:06.574895Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:06.992375Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:07.352513Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:07.699175Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:07.884131Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:08.123427Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:08.321160Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:08.482691Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:08.676546Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:09.030385Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-16T16:26:09.150671Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T16:33:16.779443Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:28.722283Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:29.756035Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:30.238108Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:30.629234Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:30.956146Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:36.627546Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:39.533702Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:40.549263Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:55.116711Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:56.847120Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:58.150536Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:58.621636Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:59.260268Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:59.473040Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:48:59.679680Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:49:05.981120Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:49:06.496345Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:49:06.814494Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-09-19T17:49:07.373257Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-20T17:25:05.588923Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-20T17:46:33.410040Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to get workspace of nearest monitor.
+[2m2024-09-28T17:51:13.237561Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-28T17:52:12.799473Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-28T18:06:39.987822Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to get workspace of nearest monitor.
+[2m2024-09-28T18:06:48.164240Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to get workspace of nearest monitor.
+[2m2024-09-28T18:06:52.705416Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Failed to get workspace of nearest monitor.
+[2m2024-09-30T08:00:14.854352Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-30T08:00:20.236687Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-09-30T08:44:20.325974Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
+[2m2024-09-30T20:34:03.639192Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m channel closed
+[2m2024-10-01T15:22:22.525756Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-02T16:18:57.872520Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-03T07:28:52.794762Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-03T07:29:15.382254Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-03T07:29:34.328100Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-03T17:48:22.503263Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-03T17:49:28.565445Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-10T06:25:25.806153Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-11T05:56:50.686736Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-12T13:36:45.001543Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m Access is denied. (0x80070005)
+[2m2024-10-18T06:11:08.784999Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
+[2m2024-10-20T10:37:01.443479Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m At least 1 workspace is required per monitor.
+
+Caused by:
+    No workspace config available to activate workspace.
