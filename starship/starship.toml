@@ -1,11 +1,11 @@
 format = """
 [](purple)\
 $os\
-$username\
+$username$hostname\
 [](bg:pink fg:purple)\
 $directory\
 [](fg:pink bg:yellow)\
-$git_branch$git_state$git_status\
+${custom.directory_info}$git_branch$git_state$git_status\
 [](fg:yellow bg:cyan)\
 $c\
 $elixir\
@@ -22,9 +22,10 @@ $scala\
 [](fg:cyan bg:green)\
 $docker_context\
 [](fg:green bg:blue)\
-$fill\
-$cmd_duration$status$time\
-[ ](fg:blue)
+$fill$status\
+${custom.cpu_usage}${custom.net_count}$time\
+$cmd_duration\
+[](fg:blue)
 $character
 """
 
@@ -32,7 +33,19 @@ $character
 # add_newline = false
 
 # Set 'foo' as custom color palette
-palette = 'synthwave_night'
+palette = 'synthwave'
+
+[palettes.gruvbox]
+blue = '#458588'
+white = '#ebdbb2'
+black = '#282828'
+red = '#cc241d'
+yellow = '#d79921'
+green = '#98971a'
+cyan = '#689d6a'
+indigo = '#d3869b'
+pink = '#d3869b'
+purple = '#b16286'
 
 # Define custom colors
 [palettes.cyber]
@@ -48,8 +61,6 @@ cyan = '#37EBF3'
 indigo = '#9370DB'
 pink = '#E455AE'
 purple = '#CB1DCD'
-
-
 
 # Define custom colors
 [palettes.pastel]
@@ -101,7 +112,15 @@ purple = '#642F6C'
 show_always = true
 style_user = "bg:purple"
 style_root = "bg:purple"
-format = '[$user ]($style)'
+format = '[$user]($style)'
+disabled = false
+
+
+[hostname]
+ssh_only = false
+style = "bg:purple"
+format = '[$ssh_symbol on $hostname ]($style)'
+ssh_symbol	= ' 🌏'
 disabled = false
 
 [character]
@@ -111,7 +130,7 @@ format = "[►](fg:purple)[►](fg:pink) "
 # represents the current operating system
 [os]
 style = "bg:purple"
-disabled = true # Disabled by default
+disabled = false # Disabled by default
 
 [fill]
 symbol = " "
@@ -122,6 +141,41 @@ style = "bg:pink"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
+
+# Module pour les informations de fichiers dans le répertoire courant
+[custom.directory_info]
+command = """
+size=$(ls -lah | grep -m 1 total | sed 's/total //')
+count=$(ls -A -1 | wc -l)
+echo "$size:$count"
+"""
+style = "bg:yellow fg:pink"
+format = "[$output]($style)"
+when = true
+
+[time]
+disabled = false
+time_format = "%v %r" # Hour:Minute Format
+style = "bg:blue"
+format = '[ $time]($style)'
+
+
+# Module pour le CPU
+[custom.cpu_usage]
+command = """ grep 'cpu ' /proc/stat | awk '{usage=($2+$4)*100/($2+$4+$5)} END {print usage}' | awk '{printf("%.1f", $1)}' """
+style = "fg:yellow bg:blue"
+format = "[ CPU:$output%]($style)"
+when = true
+
+
+# Module pour les connexions réseau
+[custom.net_count]
+command = """ awk "END {print NR}" /proc/net/tcp """
+style = "fg:yellow bg:blue"
+format = "[ Net:$output]($style)"
+when = true
+
+
 
 # Here is how you can shorten some long paths by text replacement
 # similar to mapped_locations in Oh My Posh:
@@ -199,12 +253,6 @@ format = '[ $symbol ($version) ]($style)'
 symbol = " "
 style = "bg:cyan"
 format = '[ $symbol ($version) ]($style)'
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:blue"
-format = '[ $time ]($style)'
 
 [cmd_duration]
 min_time = 1_000
