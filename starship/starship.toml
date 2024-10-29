@@ -245,4 +245,4 @@ renamed = '👅'
 deleted = '🗑'
 style = "bg:yellow"
 staged = '[++\($count\)](style)'
-format = '[$all_status$ahead_behind]($style)'⏎                              
+format = '[$all_status$ahead_behind]($style)'                             
