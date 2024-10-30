@@ -22,18 +22,39 @@ $scala\
 [](fg:cyan bg:green)\
 $docker_context\
 [](fg:green bg:blue)\
-$fill$status\
+$fill\
 ${custom.cpu_usage}${custom.net_count}$time\
-$cmd_duration\
-[](fg:blue)
+$status$cmd_duration\
+[](fg:blue)
 $character
 """
+#OS_USER_HOST>FOLDER>FOLDERINFO_GIT>LANG>DOCKER>STATUS #ACTUAL
+#OS_USER>HOST>FOLDER>FOLDERINFO>GIT>LANG>DOCKER>CPU_RAM>DATE>CMDSTATUS>
+ 
+
 
 # Disable the blank line at the start of the prompt
 # add_newline = false
 
 # Set 'foo' as custom color palette
-palette = 'synthwave'
+palette = 'gruvbox_remix_fake_collor'
+
+#fake color to match actual scheme test
+[palettes.gruvbox_remix_fake_collor]
+purple = '#0e363e' #bg_diff_blue
+pink = '#374141' #bg_visual_blue
+yellow = '#4f422e' #bg_visual_yellow
+cyan = '#a9b665' #green
+green = '#89b489' #aqua
+blue = '#1b1b1b' #bg_dim
+white = '#ddc7a1' #fg1
+white2 = '#ddc7a1'
+black_dim = '#252423'
+black = '#32302f'
+red = '#543937'
+red_alert = '#472322'
+indigo = '#a9b665' # bg_green
+
 
 [palettes.gruvbox]
 blue = '#458588'
@@ -149,7 +170,7 @@ size=$(ls -lah | grep -m 1 total | sed 's/total //')
 count=$(ls -A -1 | wc -l)
 echo "$size:$count"
 """
-style = "bg:yellow fg:pink"
+style = "bg:yellow fg:white"
 format = "[$output]($style)"
 when = true
 
@@ -260,7 +281,7 @@ show_milliseconds = false
 style = "bg:blue"
 min_time_to_notify = 60_000
 show_notifications = false
-format = "[⏱$duration]($style)"
+format = "[⏱ $duration]($style)"
 
 [status]
 style = 'bg:blue'
