@@ -8,7 +8,7 @@ set -euo pipefail
 
 # Path definitions
 ZINIT_DIR="$HOME/.local/share/zinit/bin"
-P10K_TEMPLATE="$HOME/.dotfiles/templates/.p10k.zsh"
+P10K_TEMPLATE="$HOME/dotfiles/templates/.p10k.zsh"
 P10K_TARGET="$HOME/.p10k.zsh"
 
 # Plugin list for Zinit (keep in sync with .zshrc)
