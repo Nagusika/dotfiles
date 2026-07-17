@@ -29,8 +29,14 @@ continuer exactement d'ici. Voir aussi les messages de commit E0/E1 (détaillés
       v3.4.0 dans ~/.local/share/fonts, checksum, skip WSL). Validé : parse réel de
       kitty.conf (kitty 0.47 load_config, includes OK) ; install fonts réelle (48 ttf).
       `profiles/workstation` = @default kitty fonts. **Prochaine : E5.**
-- [ ] **E5** — modules `tmux` + `vim`.
-- [ ] **E6** — CI conteneurs (Ubuntu/AlmaLinux/Arch).
+- [x] **E5** — modules `tmux` (préfixe C-a, splits vim, mouse, mode-copie vi, status
+      sobre) + `vim` (`vim dnf:vim-enhanced` ; vimrc portable sans plugin, état
+      regroupé sous ~/.local/state/vim). Validé : parse réel tmux 3.6a ; vimrc revu
+      (vim absent de la machine → validé en CI E6). `profiles/default` complet.
+- [ ] **E6** — CI conteneurs (Ubuntu/Fedora/Arch) — doit aussi valider le vimrc.
+
+NB : la machine de dev est passée d'AlmaLinux 10 à **Fedora 44** en cours de route
+(preuve à l'usage de l'agnosticité : `os.sh` mappe `fedora`→`dnf`, rien à changer).
 
 ## Cible & contraintes
 

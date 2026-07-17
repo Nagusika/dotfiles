@@ -4,4 +4,5 @@ shell
 prompt
 cli
 git
-# à venir : tmux, vim
+tmux
+vim

@@ -55,7 +55,7 @@ le gestionnaire de paquets.
 - [x] **E2** — modules shell + prompt (zsh/bash/ble.sh/starship, cœur POSIX partagé)
 - [x] **E3** — modules cli + git (eza/fzf/zoxide/bat/fd/rg + delta, git aliases)
 - [x] **E4** — modules kitty + fonts (config réécrite, Dainty Dark, JetBrainsMono NF)
-- [ ] **E5** — modules tmux + vim
+- [x] **E5** — modules tmux + vim (tmux.conf sobre préfixe C-a, vimrc portable)
 - [ ] **E6** — CI conteneurs (portabilité prouvée)
 
 ## Récupérer l'ancienne config
