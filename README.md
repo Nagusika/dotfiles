@@ -57,8 +57,7 @@ le gestionnaire de paquets.
 - [x] **E4** — modules kitty + fonts (config réécrite, Dainty Dark, JetBrainsMono NF)
 - [x] **E5** — modules tmux + vim (tmux.conf sobre préfixe C-a, vimrc portable)
 - [x] **E6** — CI conteneurs Ubuntu/AlmaLinux/Arch + shellcheck (portabilité **prouvée**)
-
-Reste optionnel : module `nvim` (workstation, `à venir` dans le profil).
+- [x] **nvim** — module workstation (Neovim tarball + init.lua autonome, LSP natif léger)
 
 ## Récupérer l'ancienne config
 

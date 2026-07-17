@@ -40,8 +40,16 @@ continuer exactement d'ici. Voir aussi les messages de commit E0/E1 (détaillés
       passent (EXIT 0)**, doctor sain, lints OK, shellcheck propre. Correctifs au
       passage : `pacman -Sy` initial dans pkg.sh ; directives/exclusions shellcheck.
 
-Reste optionnel : module `nvim` (workstation, init.lua ~150 l LSP light, install nvim
-tier-2 par tarball — pas install_bin car nvim n'est pas un binaire unique).
+- [x] **nvim** — module workstation. Neovim v0.12.4 (tarball tier-2 : binaire +
+      runtime -> ~/.local/nvim, symlink ~/.local/bin/nvim). `init.lua` autonome
+      (~120 l, sans gestionnaire de plugins) : options, keymaps, LSP natif léger
+      (vim.lsp.config/enable pour luals/bashls/pyright/gopls/ts_ls, activés seulement
+      si le binaire du serveur est présent), complétion native sur LspAttach. Validé :
+      install réelle + `init.lua` chargé headless sans erreur ; workstation complet
+      dans un conteneur Ubuntu (ble.sh compilé + kitty + fonts + nvim, EXIT 0).
+
+**Refonte terminée.** Roadmap E0-E6 + nvim, tout validé, tout poussé. profiles :
+`default` = shell prompt cli git tmux vim ; `workstation` = @default kitty fonts nvim.
 
 NB : la machine de dev est passée d'AlmaLinux 10 à **Fedora 44** en cours de route
 (preuve à l'usage de l'agnosticité : `os.sh` mappe `fedora`→`dnf`, rien à changer).
