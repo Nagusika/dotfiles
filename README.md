@@ -53,7 +53,7 @@ le gestionnaire de paquets.
 - [x] **E0** — hygiène : archivage legacy, `.gitattributes`/`.gitignore`, encodage UTF-8/LF
 - [x] **E1** — moteur `lib/` + `bootstrap.sh` + `doctor.sh` (inerte, testé en dry-run)
 - [x] **E2** — modules shell + prompt (zsh/bash/ble.sh/starship, cœur POSIX partagé)
-- [ ] **E3** — modules cli + git (eza/fzf/zoxide/bat/fd/rg + delta)
+- [x] **E3** — modules cli + git (eza/fzf/zoxide/bat/fd/rg + delta, git aliases)
 - [ ] **E4** — modules kitty + fonts
 - [ ] **E5** — modules tmux + vim
 - [ ] **E6** — CI conteneurs (portabilité prouvée)

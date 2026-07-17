@@ -1,0 +1,44 @@
+# Identité machine (name/email) en premier, surchargeable ; jamais versionnée.
+[include]
+	path = ~/.config/dotfiles/git.local
+
+[init]
+	defaultBranch = main
+[core]
+	pager = delta
+	excludesfile = ~/.config/git/ignore
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+	hyperlinks = false
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default
+	algorithm = histogram
+[rerere]
+	enabled = true
+[pull]
+	ff = only
+[push]
+	autoSetupRemote = true
+	default = simple
+[fetch]
+	prune = true
+[color]
+	ui = auto
+
+[alias]
+	st = status -sb
+	co = checkout
+	sw = switch
+	br = branch
+	ci = commit
+	amend = commit --amend --no-edit
+	unstage = reset HEAD --
+	last = log -1 HEAD --stat
+	lg = log --graph --oneline --decorate --all
+	d = diff
+	ds = diff --staged

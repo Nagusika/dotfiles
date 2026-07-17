@@ -1,0 +1,27 @@
+# gitignore global (core.excludesfile). Bruit jamais souhaité dans un dépôt.
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+*~
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# Deps / builds fréquents
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+target/
+dist/
+.direnv/
+
+# Secrets locaux
+*.local
+.env.local

@@ -1,0 +1,5 @@
+bat
+fd apt:fd-find dnf:fd-find pacman:fd
+ripgrep
+fzf
+btop

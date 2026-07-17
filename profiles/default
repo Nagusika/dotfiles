@@ -2,4 +2,6 @@
 # Un module (dossier de modules/) par ligne. "@autre" inclut un autre profil.
 shell
 prompt
-# à venir : cli, git, tmux, vim
+cli
+git
+# à venir : tmux, vim

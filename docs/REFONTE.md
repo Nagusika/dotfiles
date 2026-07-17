@@ -18,7 +18,11 @@ continuer exactement d'ici. Voir aussi les messages de commit E0/E1 (détaillés
       checksum) + `starship.toml` sobre. Validé : install starship réel + checksum,
       linker réel, sourcing POSIX. `profiles/default` = shell prompt ; `workstation`
       = `@default`. **Prochaine étape : E3.**
-- [ ] **E3** — modules `cli` + `git`.
+- [x] **E3** — modules `cli` (bat/fd/ripgrep/fzf/btop tier-1 ; eza 0.23.5 + zoxide
+      0.10.0 tier-2 musl ; shims batcat/fdfind→bat/fd pour Debian) + `git` (git +
+      delta 0.19.2 tier-2 ; `~/.config/git/{config,ignore}`, aliases, identité via
+      include `~/.config/dotfiles/git.local`). Validé : installs réels + checksums,
+      identité git via include (`git var GIT_AUTHOR_IDENT`). **Prochaine : E4.**
 - [ ] **E4** — modules `kitty` + `fonts`.
 - [ ] **E5** — modules `tmux` + `vim`.
 - [ ] **E6** — CI conteneurs (Ubuntu/AlmaLinux/Arch).
