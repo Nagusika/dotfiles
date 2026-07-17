@@ -10,11 +10,14 @@ continuer exactement d'ici. Voir aussi les messages de commit E0/E1 (détaillés
       `git rm` i3/.glzr/p10k/templates/starship/kitty-bak+symlinks-cassés/zsh-install.zsh,
       ajout `.gitattributes`(eol=lf)/`.gitignore`/`.editorconfig`/`LICENSE`,
       README réécrit UTF-8/LF. Commit `d2ae755` (poussé).
-- [x] **E1** — moteur `lib/` + `bootstrap.sh` + `doctor.sh`, inerte, testé en
-      dry-run + HOME jetable. Commit `32cdc35` (**pas encore poussé au moment
-      de l'écriture — voir Reprise**).
-- [ ] **E2** — modules `shell` + `prompt` (⚠ premier point de non-retour : le
-      `~/.bashrc` réel est remplacé, avec backup automatique par le linker).
+- [x] **E1** — moteur `lib/` + `bootstrap.sh` + `doctor.sh`, inerte, testé.
+- [x] **E2** — modules `shell` + `prompt`. Cœur POSIX `common.sh`+aliases+functions
+      partagé bash/zsh ; `.profile`/`.bash_profile`/`.zprofile`/`.bashrc`/`.zshrc` ;
+      plugins zsh vendored (autosuggestions v0.7.1, syntax-highlighting 0.8.0) ;
+      ble.sh v0.4.0-devel3 build workstation-only ; Starship 1.26.0 (musl pinné +
+      checksum) + `starship.toml` sobre. Validé : install starship réel + checksum,
+      linker réel, sourcing POSIX. `profiles/default` = shell prompt ; `workstation`
+      = `@default`. **Prochaine étape : E3.**
 - [ ] **E3** — modules `cli` + `git`.
 - [ ] **E4** — modules `kitty` + `fonts`.
 - [ ] **E5** — modules `tmux` + `vim`.

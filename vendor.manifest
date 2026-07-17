@@ -1,6 +1,5 @@
 # Dépôts tiers clonés + pinnés au bootstrap : "<dest-relatif> <url> <ref>"
 # Récupérés dans vendor/ (gitignoré). Re-checkout à chaque run = mise à jour idempotente.
-# Peuplé à partir de E2. Exemples :
-# vendor/zsh-autosuggestions       https://github.com/zsh-users/zsh-autosuggestions        v0.7.1
-# vendor/zsh-syntax-highlighting   https://github.com/zsh-users/zsh-syntax-highlighting    0.8.0
-# vendor/ble.sh                    https://github.com/akinomyoga/ble.sh                    <sha>
+vendor/zsh-autosuggestions       https://github.com/zsh-users/zsh-autosuggestions        v0.7.1
+vendor/zsh-syntax-highlighting   https://github.com/zsh-users/zsh-syntax-highlighting    0.8.0
+vendor/ble.sh                    https://github.com/akinomyoga/ble.sh                    v0.4.0-devel3
