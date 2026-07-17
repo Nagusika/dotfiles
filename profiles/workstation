@@ -1,3 +1,5 @@
 # Profil "workstation" — postes GUI. Hérite de "default", ajoute la couche graphique.
 @default
-# à venir : kitty, fonts, nvim
+kitty
+fonts
+# à venir : nvim

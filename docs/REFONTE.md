@@ -23,7 +23,12 @@ continuer exactement d'ici. Voir aussi les messages de commit E0/E1 (détaillés
       delta 0.19.2 tier-2 ; `~/.config/git/{config,ignore}`, aliases, identité via
       include `~/.config/dotfiles/git.local`). Validé : installs réels + checksums,
       identité git via include (`git var GIT_AUTHOR_IDENT`). **Prochaine : E4.**
-- [ ] **E4** — modules `kitty` + `fonts`.
+- [x] **E4** — modules `kitty` (pkg kitty ; `kitty.conf` réécrit — plus de
+      linux_display_server forcé, url_color OK, shell_integration enabled, splits +
+      keybindings ; thème Dainty Dark ; includes) + `fonts` (JetBrainsMono Nerd Font
+      v3.4.0 dans ~/.local/share/fonts, checksum, skip WSL). Validé : parse réel de
+      kitty.conf (kitty 0.47 load_config, includes OK) ; install fonts réelle (48 ttf).
+      `profiles/workstation` = @default kitty fonts. **Prochaine : E5.**
 - [ ] **E5** — modules `tmux` + `vim`.
 - [ ] **E6** — CI conteneurs (Ubuntu/AlmaLinux/Arch).
 

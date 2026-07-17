@@ -54,7 +54,7 @@ le gestionnaire de paquets.
 - [x] **E1** — moteur `lib/` + `bootstrap.sh` + `doctor.sh` (inerte, testé en dry-run)
 - [x] **E2** — modules shell + prompt (zsh/bash/ble.sh/starship, cœur POSIX partagé)
 - [x] **E3** — modules cli + git (eza/fzf/zoxide/bat/fd/rg + delta, git aliases)
-- [ ] **E4** — modules kitty + fonts
+- [x] **E4** — modules kitty + fonts (config réécrite, Dainty Dark, JetBrainsMono NF)
 - [ ] **E5** — modules tmux + vim
 - [ ] **E6** — CI conteneurs (portabilité prouvée)
 
