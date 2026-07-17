@@ -1,0 +1,12 @@
+# Plugins tiers récupérés au bootstrap (clone pinné) — hors du repo.
+/vendor/
+
+# Backups horodatés produits par le linker.
+*.orig
+*.bak
+*.bak.*
+
+# Bruit d'éditeur / OS.
+*.swp
+*~
+.DS_Store

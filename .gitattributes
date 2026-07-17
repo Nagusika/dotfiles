@@ -1,0 +1,18 @@
+# Normalise tout en LF dans le repo (tue le CRLF/UTF-16 hérité).
+* text=auto eol=lf
+
+# Scripts shell : toujours LF, exécutables côté OS.
+*.sh   text eol=lf
+*.bash text eol=lf
+*.zsh  text eol=lf
+
+# Binaires : jamais de conversion d'eol.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.ico  binary
+*.gif  binary
+*.ttf  binary
+*.otf  binary
+*.woff binary
+*.woff2 binary
