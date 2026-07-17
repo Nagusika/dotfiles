@@ -6,9 +6,10 @@ AlmaLinux/RHEL, Arch et WSL**.
 
 > 🚧 **Refonte en cours.** Le socle historique (i3/GlazeWM/p10k) a été archivé
 > sous les tags `v0-legacy` et `legacy-endeavouros`. La nouvelle architecture se
-> construit par étapes (voir *Feuille de route* en bas). Le `bootstrap.sh`
-> n'existe pas encore — ne clone pas ça sur une machine que tu tiens à garder
-> intacte tant que l'étape E1 n'est pas livrée.
+> construit par étapes (voir *Feuille de route* en bas). Le moteur (`bootstrap.sh`,
+> `doctor.sh`, `lib/`) est en place mais **inerte** : les profils ne référencent
+> encore aucun module, donc `./bootstrap.sh` ne déploie rien. Les modules
+> arrivent à partir de E2.
 
 ## Principes
 
@@ -49,7 +50,7 @@ le gestionnaire de paquets.
 ## Feuille de route
 
 - [x] **E0** — hygiène : archivage legacy, `.gitattributes`/`.gitignore`, encodage UTF-8/LF
-- [ ] **E1** — moteur `lib/` + `bootstrap.sh` + `doctor.sh`
+- [x] **E1** — moteur `lib/` + `bootstrap.sh` + `doctor.sh` (inerte, testé en dry-run)
 - [ ] **E2** — modules shell + prompt (zsh/bash/ble.sh/starship)
 - [ ] **E3** — modules cli + git (eza/fzf/zoxide/bat/fd/rg + delta)
 - [ ] **E4** — modules kitty + fonts

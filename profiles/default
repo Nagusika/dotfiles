@@ -1,0 +1,9 @@
+# Profil "default" — machines headless / serveurs.
+# Un module (dossier de modules/) par ligne. "@autre" inclut un autre profil.
+# Peuplé à partir de E2. Contenu cible :
+#   shell
+#   prompt
+#   cli
+#   git
+#   tmux
+#   vim

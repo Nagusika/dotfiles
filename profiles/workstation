@@ -1,0 +1,6 @@
+# Profil "workstation" — postes GUI. Hérite de "default", ajoute la couche graphique.
+# Peuplé à partir de E2/E4. Contenu cible :
+#   @default
+#   kitty
+#   fonts
+#   nvim
