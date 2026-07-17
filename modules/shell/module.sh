@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # modules/shell/module.sh — post-install du socle shell.
 # Sourcé par bootstrap.sh ; mod_install() est appelée dans un sous-shell.
 mod_install() {

@@ -3,11 +3,11 @@
 # Usage : ./doctor.sh [--deep]   (--deep = balayage des liens cassés pointant vers le repo)
 set -u
 
-DOTFILES=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+DOTFILES=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)
 export DOTFILES
-# shellcheck source=/dev/null
+# shellcheck source=lib/log.sh
 . "$DOTFILES/lib/log.sh"
-# shellcheck source=/dev/null
+# shellcheck source=lib/os.sh
 . "$DOTFILES/lib/os.sh"
 detect_os
 

@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # lib/pkg.sh — L'UNIQUE abstraction du gestionnaire de paquets. Requiert detect_os au préalable.
 
 # pkg_install : lit sur stdin des lignes "nom [apt:x dnf:y pacman:z]".
@@ -26,7 +27,9 @@ pkg_install() {
       if [ -z "${_APT_FRESH:-}" ]; then run $SUDO apt-get update -qq || warn "apt-get update"; _APT_FRESH=1; fi
       run $SUDO apt-get install -y --no-install-recommends $_pkgs ;;
     dnf)    run $SUDO dnf install -y $_pkgs ;;
-    pacman) run $SUDO pacman -S --needed --noconfirm $_pkgs ;;
+    pacman)
+      if [ -z "${_PAC_FRESH:-}" ]; then run $SUDO pacman -Sy --noconfirm || warn "pacman -Sy"; _PAC_FRESH=1; fi
+      run $SUDO pacman -S --needed --noconfirm $_pkgs ;;
     *)      warn "gestionnaire inconnu ($PM) : paquets sautés :$_pkgs"; return 1 ;;
   esac
 }

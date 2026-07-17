@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # lib/log.sh — sorties et exécution tracée. Sourcé par bootstrap.sh et doctor.sh.
 # Respecte NO_COLOR (https://no-color.org) et DRY_RUN.
 

@@ -56,7 +56,9 @@ le gestionnaire de paquets.
 - [x] **E3** — modules cli + git (eza/fzf/zoxide/bat/fd/rg + delta, git aliases)
 - [x] **E4** — modules kitty + fonts (config réécrite, Dainty Dark, JetBrainsMono NF)
 - [x] **E5** — modules tmux + vim (tmux.conf sobre préfixe C-a, vimrc portable)
-- [ ] **E6** — CI conteneurs (portabilité prouvée)
+- [x] **E6** — CI conteneurs Ubuntu/AlmaLinux/Arch + shellcheck (portabilité **prouvée**)
+
+Reste optionnel : module `nvim` (workstation, `à venir` dans le profil).
 
 ## Récupérer l'ancienne config
 

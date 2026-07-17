@@ -1,0 +1,46 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  bootstrap:
+    name: bootstrap ${{ matrix.image }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        image:
+          - ubuntu:24.04
+          - almalinux:10
+          - archlinux:latest
+    steps:
+      - uses: actions/checkout@v4
+      # Rejoue bootstrap + doctor + lints dans un conteneur vierge de la distro.
+      # Utilisateur non-root sudo, install paquets réelle, binaires tier-2, symlinks.
+      - name: bootstrap + doctor + lints (${{ matrix.image }})
+        run: docker run --rm -v "$PWD:/work:ro" "${{ matrix.image }}" sh /work/ci/run.sh
+
+  shellcheck:
+    name: shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq shellcheck
+      - name: moteur + modules + ci
+        # exclusions assumées : SC1091 (sources dynamiques), SC2013 (word-split
+        # volontaire des noms de modules), SC2088 (tilde littéral d'affichage),
+        # SC2016 (expansion volontairement différée dans su -c '...').
+        run: shellcheck -x -e SC1091,SC2013,SC2088,SC2016 lib/*.sh bootstrap.sh doctor.sh modules/*/module.sh ci/run.sh
+      - name: cœur POSIX + fichiers de login
+        run: |
+          shellcheck -s sh -e SC1091 \
+            modules/shell/home/.config/sh/common.sh \
+            modules/shell/home/.config/sh/aliases.sh \
+            modules/shell/home/.config/sh/functions.sh \
+            modules/shell/home/.profile \
+            modules/shell/home/.zprofile \
+            modules/shell/home/.bash_profile

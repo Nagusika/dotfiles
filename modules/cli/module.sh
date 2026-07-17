@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # modules/cli/module.sh — coreutils modernes.
 # Tier-1 (paquets, cf. packages) : bat, fd, ripgrep, fzf, btop.
 # Tier-2 (binaires musl pinnés, absents des dépôts EL/EPEL) : eza, zoxide.

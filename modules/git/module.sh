@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # modules/git/module.sh — git + delta (pager de diff).
 # delta est installé en binaire musl pinné partout (absent d'EL/EPEL, versions
 # inégales ailleurs) → un seul mécanisme, cohérent sur les 4 cibles.

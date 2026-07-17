@@ -33,7 +33,15 @@ continuer exactement d'ici. Voir aussi les messages de commit E0/E1 (détaillés
       sobre) + `vim` (`vim dnf:vim-enhanced` ; vimrc portable sans plugin, état
       regroupé sous ~/.local/state/vim). Validé : parse réel tmux 3.6a ; vimrc revu
       (vim absent de la machine → validé en CI E6). `profiles/default` complet.
-- [ ] **E6** — CI conteneurs (Ubuntu/Fedora/Arch) — doit aussi valider le vimrc.
+- [x] **E6** — CI : `.github/workflows/ci.yml` (matrice ubuntu:24.04 / almalinux:10 /
+      archlinux:latest via `docker run … sh ci/run.sh` + job shellcheck) et `ci/run.sh`
+      (conteneur vierge → user non-root sudo → bootstrap default + doctor + lints
+      bash/zsh/vim/dash). **Exécuté réellement en local via podman : les 3 distros
+      passent (EXIT 0)**, doctor sain, lints OK, shellcheck propre. Correctifs au
+      passage : `pacman -Sy` initial dans pkg.sh ; directives/exclusions shellcheck.
+
+Reste optionnel : module `nvim` (workstation, init.lua ~150 l LSP light, install nvim
+tier-2 par tarball — pas install_bin car nvim n'est pas un binaire unique).
 
 NB : la machine de dev est passée d'AlmaLinux 10 à **Fedora 44** en cours de route
 (preuve à l'usage de l'agnosticité : `os.sh` mappe `fedora`→`dnf`, rien à changer).

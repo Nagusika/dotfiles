@@ -1,3 +1,5 @@
+# shellcheck shell=bash
+# shellcheck disable=SC2034  # PM/OS_ID/ARCH/IS_WSL/SUDO/NO_ROOT sont consommés par les autres lib/modules
 # lib/os.sh — détection distribution / environnement.
 # detect_os() renseigne : OS_ID OS_LIKE PM ARCH IS_WSL SUDO NO_ROOT
 

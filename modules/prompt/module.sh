@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # modules/prompt/module.sh — installe Starship (binaire musl statique, pinné + checksum).
 mod_install() {
   # shellcheck source=/dev/null

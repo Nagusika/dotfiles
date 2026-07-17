@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # lib/link.sh — déploiement des symlinks par miroir. Le dossier home/ d'un module EST le manifeste.
 # Requiert DOTFILES défini. État et backups sous XDG_STATE_HOME.
 

@@ -3,7 +3,7 @@
 # Idempotent, relançable. set -u seul : un module en échec n'avorte JAMAIS le reste.
 set -u
 
-DOTFILES=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
+DOTFILES=$(CDPATH='' cd -- "$(dirname -- "$0")" && pwd -P)
 export DOTFILES
 
 for _lib in log os pkg fetch link; do

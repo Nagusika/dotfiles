@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # lib/fetch.sh — acquisition hors-dépôt. Requiert curl, sha256sum, tar.
 
 # install_bin <bin> <version> <url> <sha256>

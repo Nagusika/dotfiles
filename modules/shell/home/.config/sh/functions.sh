@@ -35,21 +35,21 @@ ftext() {
 
 # cpg <src> <dst> : copie puis entre dans dst si c'est un répertoire.
 cpg() {
-  if [ -d "$2" ]; then cp -- "$1" "$2" && cd -- "$2"; else cp -- "$1" "$2"; fi
+  if [ -d "$2" ]; then cp -- "$1" "$2" && cd -- "$2" || return; else cp -- "$1" "$2"; fi
 }
 
 # mvg <src> <dst> : déplace puis entre dans dst si c'est un répertoire.
 mvg() {
-  if [ -d "$2" ]; then mv -- "$1" "$2" && cd -- "$2"; else mv -- "$1" "$2"; fi
+  if [ -d "$2" ]; then mv -- "$1" "$2" && cd -- "$2" || return; else mv -- "$1" "$2"; fi
 }
 
 # mkcd <dir> : crée le répertoire et y entre.
-mkcd() { mkdir -p -- "$1" && cd -- "$1"; }
+mkcd() { mkdir -p -- "$1" && cd -- "$1" || return; }
 
 # up [n] : remonte de n répertoires (défaut 1).
 up() {
   local _n _d
   _n=${1:-1}; _d=
   while [ "$_n" -gt 0 ]; do _d="../$_d"; _n=$((_n - 1)); done
-  cd -- "${_d:-.}"
+  cd -- "${_d:-.}" || return
 }

@@ -1,3 +1,4 @@
+# shellcheck shell=bash
 # modules/fonts/module.sh — JetBrainsMono Nerd Font (patchée, absente des dépôts).
 # Installée dans ~/.local/share/fonts (pas de root). Sautée sous WSL (police côté Windows).
 mod_install() {
